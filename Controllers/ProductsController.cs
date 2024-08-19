@@ -25,7 +25,7 @@ namespace ProductsCrudApi.Controllers
     [HttpGet("{id}")]
     public async Task<ActionResult<Product>> GetProduct(int id)
     {
-      var product = await _productService.GetByIdAsync(id);
+      var product = await _productService.GetProductByIdAsync(id);
 
       if (product == null)
       {

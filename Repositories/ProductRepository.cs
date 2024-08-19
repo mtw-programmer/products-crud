@@ -38,7 +38,7 @@ namespace ProductsCrudApi.Repositories
     public async Task DeleteAsync(int id)
     {
       var product = await _context.Product.FindAsync(id);
-      if (product !== null)
+      if (product != null)
       {
         _context.Products.Remove(product);
         await _context.SaveChangesAsync();
